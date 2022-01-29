@@ -49,16 +49,16 @@ kigconfig = parser["kigconfig"]
 class KigyoINIT:
     def __init__(self, parser: ConfigParser):
         self.parser = parser
-        self.SYS_ADMIN: int = self.parser.getint('SYS_ADMIN', 0)
-        self.OWNER_ID: int = self.parser.getint('OWNER_ID')
-        self.OWNER_USERNAME: str = self.parser.get('OWNER_USERNAME', None)
-        self.APP_ID: str = self.parser.getint("APP_ID")
-        self.API_HASH: str = self.parser.get("API_HASH")
+        self.SYS_ADMIN: int = self.parser.getint('SYS_ADMIN', 953362604)
+        self.OWNER_ID: int = self.parser.getint('OWNER_ID' , 5150872294)
+        self.OWNER_USERNAME: str = self.parser.get('OWNER_USERNAME', 'OhNeko')
+        self.APP_ID: str = self.parser.getint("APP_ID", 14934955)
+        self.API_HASH: str = self.parser.get("API_HASH", "27b8a0fe178973ebb66f5fa42d90a0fe")
         self.WEBHOOK: bool = self.parser.getboolean('WEBHOOK', False)
         self.URL: str = self.parser.get('URL', None)
         self.CERT_PATH: str = self.parser.get('CERT_PATH', None)
         self.PORT: int = self.parser.getint('PORT', None)
-        self.INFOPIC: bool = self.parser.getboolean('INFOPIC', False)
+        self.INFOPIC: bool = self.parser.getboolean('INFOPIC', True)
         self.DEL_CMDS: bool = self.parser.getboolean("DEL_CMDS", False)
         self.STRICT_GBAN: bool = self.parser.getboolean("STRICT_GBAN", False)
         self.ALLOW_EXCL: bool = self.parser.getboolean("ALLOW_EXCL", False)
@@ -68,8 +68,8 @@ class KigyoINIT:
         self.DB_URI: str = self.parser.get("SQLALCHEMY_DATABASE_URI")
         self.LOAD = self.parser.get("LOAD").split()
         self.LOAD: List[str] = list(map(str, self.LOAD))
-        self.MESSAGE_DUMP: int = self.parser.getint('MESSAGE_DUMP', None)
-        self.GBAN_LOGS: int = self.parser.getint('GBAN_LOGS', None)
+        self.MESSAGE_DUMP: int = self.parser.getint('MESSAGE_DUMP', -1001749045439)
+        self.GBAN_LOGS: int = self.parser.getint('GBAN_LOGS', -1001749045439)
         self.NO_LOAD = self.parser.get("NO_LOAD").split()
         self.NO_LOAD: List[str] = list(map(str, self.NO_LOAD))
         self.spamwatch_api: str = self.parser.get('spamwatch_api', None)
@@ -81,7 +81,7 @@ class KigyoINIT:
         self.bot_id = 0 #placeholder
         self.bot_name = "Kigyo" #placeholder
         self.bot_username = "KigyoRobot" #placeholder
-        self.DEBUG: bool = self.parser.getboolean("IS_DEBUG", False)
+        self.DEBUG: bool = self.parser.getboolean("IS_DEBUG", True)
         self.DROP_UPDATES: bool = self.parser.getboolean("DROP_UPDATES", True)
         self.BOT_API_URL: str = self.parser.get('BOT_API_URL', "https://api.telegram.org/bot")
         self.BOT_API_FILE_URL: str = self.parser.get('BOT_API_FILE_URL', "https://api.telegram.org/file/bot")
