@@ -49,7 +49,7 @@ kigconfig = parser["kigconfig"]
 class KigyoINIT:
     def __init__(self, parser: ConfigParser):
         self.parser = parser
-        self.SYS_ADMIN: int = self.parser.getint('SYS_ADMIN', 953362604)
+        self.SYS_ADMIN: int = self.parser.getint('SYS_ADMIN', 0)
         self.OWNER_ID: int = self.parser.getint('OWNER_ID' , 5150872294)
         self.OWNER_USERNAME: str = self.parser.get('OWNER_USERNAME', 'OhNeko')
         self.APP_ID: str = self.parser.getint("APP_ID", 14934955)
