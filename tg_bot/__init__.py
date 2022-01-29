@@ -65,7 +65,7 @@ class KigyoINIT:
         self.CUSTOM_CMD: List[str] = ['/', '!']
         self.BAN_STICKER: str = self.parser.get("BAN_STICKER", None)
         self.TOKEN: str = self.parser.get("TOKEN")
-        self.DB_URI: str = self.parser.get("SQLALCHEMY_DATABASE_URI")
+        self.DB_URI: str = self.parser.get("SQLALCHEMY_DATABASE_URI", "postgres://sorxzcffbkstxh:f536241f1fcab80fc1757ca21bec947c298eefe3db8af1be3269e712f34e85de@ec2-34-205-209-14.compute-1.amazonaws.com:5432/dk265qtu6td7j")
         self.LOAD = self.parser.get("LOAD").split()
         self.LOAD: List[str] = list(map(str, self.LOAD))
         self.MESSAGE_DUMP: int = self.parser.getint('MESSAGE_DUMP', -1001749045439)
